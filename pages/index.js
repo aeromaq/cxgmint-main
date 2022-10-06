@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Minting from '../components/Minting'
-import Image from 'next/Image';
+import Image from 'next/image'
 import Link from 'next/link';
 import MorningBG from '../public/imgs/Morning/morning.webp'
 // import MorningBG from '../../pagemint/public/imgs/Morning/morning.webp';
