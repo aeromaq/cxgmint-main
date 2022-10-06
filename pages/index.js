@@ -2,15 +2,15 @@ import Head from 'next/head';
 import Minting from '../components/Minting'
 import Image from 'next/Image';
 import Link from 'next/link';
+import MorningBG from '../public/imgs/Morning/morning.webp'
+// import MorningBG from '../../pagemint/public/imgs/Morning/morning.webp';
+import RednightBG from '../public/imgs/Rednight/rednight.webp';
+import SunsetBG from '../public/imgs/Sunset/sunset.webp';
+import NightBG from '../public/imgs/Night/night.webp';
+import HomePNG from '../assets/home.png';
 
-import morningBG from '../../pagemint/public/imgs/Morning/morning.webp';
-import rednightBG from '../../pagemint/public/imgs/Rednight/rednight.webp';
-import sunsetBG from '../../pagemint/public/imgs/Sunset/sunset.webp';
-import nightBG from '../../pagemint/public/imgs/Night/night.webp';
-import homePNG from '../assets/home.png';
-
-import dcImg from '../../pagemint/public/imgs/discord.png';
-import twImg from '../../pagemint/public/imgs/twitter.png';
+import DcImg from '../public/imgs/Discord.png';
+import TwImg from '../public/imgs/twitter.png';
 
 let setLogoBgSrc;
 
@@ -24,19 +24,19 @@ hrsFormatter = new Intl.DateTimeFormat([], hours);
 var utcHour = hrsFormatter.format(new Date()) ;
 
 if(utcHour==0 || utcHour==24){
-  setLogoBgSrc = rednightBG;
+  setLogoBgSrc = RednightBG;
 }
 if(utcHour>=1 && utcHour<=4 ){
-  setLogoBgSrc = rednightBG;
+  setLogoBgSrc = RednightBG;
 }
 if(utcHour>=5 && utcHour<=11){
-  setLogoBgSrc = morningBG;
+  setLogoBgSrc = MorningBG;
 }
 if(utcHour>=12 && utcHour<=17){
-  setLogoBgSrc = sunsetBG;
+  setLogoBgSrc = SunsetBG;
 }
 if(utcHour >= 18 && utcHour<=23){
-  setLogoBgSrc = nightBG;
+  setLogoBgSrc = NightBG;
 }
 
 export default function Home() {
@@ -62,7 +62,7 @@ export default function Home() {
       <Link className='m-auto' href="https://www.studiocxgnus.com"  passHref>
         <a>
           <div className='homeBTN fixed top-[15px] left-[15px] h-[auto] w-[125px] '>
-            <Image src={homePNG} />
+            <Image src={HomePNG} />
           </div>
         </a>
       </Link>
@@ -98,7 +98,7 @@ export default function Home() {
       <Link className='m-auto' href="https://discord.com/invite/sVsdPmFHsy"  passHref>
         <a target="_blank">
           <div className=' h-[50px] w-[50px] m-auto hover:scale-[0.95] transition-all ease-in-out'>
-            <Image  src={dcImg}/>
+            <Image  src={DcImg}/>
           </div>
         </a>
       </Link>
@@ -106,7 +106,7 @@ export default function Home() {
       <Link className='m-auto' href="https://twitter.com/cxgnusnft"  passHref>
         <a target="_blank">
           <div className=' h-[50px] w-[50px] m-auto hover:scale-[0.95] transition-all ease-in-out'>
-            <Image  src={twImg}/>
+            <Image  src={TwImg}/>
           </div>
         </a>
       </Link>
